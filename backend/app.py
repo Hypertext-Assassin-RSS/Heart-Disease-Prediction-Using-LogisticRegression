@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 model = joblib.load('../backend/model/heart_disease_model.pkl')
 
 @app.route('/predict', methods=['POST'])
