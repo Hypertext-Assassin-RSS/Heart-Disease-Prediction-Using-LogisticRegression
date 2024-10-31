@@ -1,0 +1,27 @@
+{
+  "name": "heart-disease-prediction",
+  "version": "1.0.0",
+  "description": "heart-disease-prediction app react frontend flest api python",
+  "scripts": {
+    "install": "concurrently \"cd app && npm install\" \"cd backend && pip install -r requirements.txt\"",
+    "dev": "concurrently \"cd app && npm run dev\" \"cd backend && python app.py\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hypertext-Assassin-RSS/Heart-Disease-Prediction-Using-LogisticRegression.git"
+  },
+  "keywords": [
+    "Ai",
+    "LogisticRegression"
+  ],
+  "author": "RajithSanjaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hypertext-Assassin-RSS/Heart-Disease-Prediction-Using-LogisticRegression/issues"
+  },
+  "homepage": "https://github.com/Hypertext-Assassin-RSS/Heart-Disease-Prediction-Using-LogisticRegression#readme",
+  "dependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
