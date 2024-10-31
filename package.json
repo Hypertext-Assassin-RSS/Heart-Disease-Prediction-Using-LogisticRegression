@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "heart-disease-prediction app react frontend flest api python",
   "scripts": {
-    "install": "concurrently \"cd app && npm install\" \"cd backend && pip install -r requirements.txt\"",
-    "dev": "concurrently \"cd app && npm run dev\" \"cd backend && python app.py\"",
+    "install": "concurrently \"cd frontend && npm install\" \"cd backend && pip install -r requirements.txt\"",
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && python app.py\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
