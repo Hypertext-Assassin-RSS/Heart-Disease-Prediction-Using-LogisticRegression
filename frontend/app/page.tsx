@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from 'axios';
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
+import {Select, SelectSection, SelectItem} from "@nextui-org/select";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,14 @@ export default function Home() {
   
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+
+    // Handle gender selection
+    const handleGenderChange = (e: { target: { value: any; }; }) => {
+      setFormData((prevData) => ({
+        ...prevData,
+        gender: e.target.value,
+      }));
+    };
 
   // Handle input change
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
@@ -64,16 +73,17 @@ export default function Home() {
             required 
             className="w-full"
           />
-          <Input 
-            type="number" 
-            name="gender" 
-            label="Gender (1 for male, 0 for female)" 
-            placeholder="Enter gender"  
+          <Select 
+            label="Gender"
             value={formData.gender} 
-            onChange={handleChange} 
+            onChange={handleGenderChange} 
+            placeholder="Select Gender"
             required 
             className="w-full"
-          />
+          >
+            <SelectItem value="1" key={"1"}>Male</SelectItem>
+            <SelectItem value="2" key={"0"}>Female</SelectItem>
+          </Select>
           <Input 
             type="number" 
             name="cigsPerDay" 
