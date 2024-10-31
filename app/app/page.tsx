@@ -49,7 +49,7 @@ export default function Home() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen py-8 md:py-10 ">
+    <section className="flex flex-col items-center justify-center py-8 md:py-10 ">
       <div className="p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl  font-semibold text-center mb-6">Heart Disease Prediction</h2>
         
